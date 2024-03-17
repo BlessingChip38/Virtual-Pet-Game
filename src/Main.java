@@ -1,15 +1,22 @@
 public class Main {
     public static void main(String[] args) {
         Pet dog = new Pet();
-        Activities activities = new Activities(dog);
+        Pet cat = new Pet();
+        PetAttributes DogAttributes = new PetAttributes(dog);
+        PetAttributes CatAttributes = new PetAttributes(cat);
+        Activities DogActivities = new Activities(DogAttributes);
+        Activities CatActivities = new Activities(CatAttributes);
 
-        activities.punish();
+        dog.setName("Bingo");
+        cat.setName("Britton");
+        DogActivities.punish();
         dog.printStats();
-        activities.play();
+        cat.printStats();
+        DogActivities.play();
         dog.printStats();
-        activities.rest();
+        DogActivities.rest();
         dog.printStats();
-        activities.feed();
+        DogActivities.feed();
         dog.printStats();
     }
 }

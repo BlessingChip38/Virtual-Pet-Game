@@ -1,34 +1,31 @@
 public class Activities {
     //This will hold the activities to increase and decrease attributes of Pet
-    private int petHealth;
-    private int petEnergy;
-    private int petHappiness;
+    private PetAttributes petAttributes;
 
-    private Pet pet;
-
-    public Activities(Pet pet) {
-        this.pet = pet;
+    public Activities(PetAttributes petAttributes) {
+        this.petAttributes = petAttributes;
     }
 
     public void feed() {
-        pet.increaseHealth(1);
-        pet.increaseHappiness(10);
-        pet.decreaseEnergy(5);
+        petAttributes.increaseHappiness(10);
+        petAttributes.decreaseEnergy(10);
 
     }
 
     public void rest() {
-        pet.increaseEnergy(100);
+        petAttributes.increaseEnergy(25);
+        petAttributes.decreaseHappiness(10);
 
     }
 
     public void play() {
-        pet.increaseHappiness(20);
-        pet.decreaseEnergy(20);
+        petAttributes.increaseHappiness(50);
+        petAttributes.decreaseEnergy(50);
 
     }
 
     public void punish() {
-        pet.decreaseHappiness(50);
+        petAttributes.decreaseHappiness(100);
+
     }
 }
