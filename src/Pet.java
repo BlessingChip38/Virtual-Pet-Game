@@ -57,11 +57,11 @@ public class Pet {
 
 
     public void increaseEnergy(int amount) {
-        energy = Math.min(amount, 100);
+        energy = Math.min(amount + energy, 100);
     }
 
     public void decreaseEnergy(int amount) {
-        energy = Math.max(amount, 0);
+        energy = Math.max(energy - amount, 0);
     }
 
     /**
@@ -86,5 +86,13 @@ public class Pet {
 
     public int getEnergy() {
         return energy;
+    }
+
+    public void printStats(){
+        System.out.println("Name: " + name);
+        System.out.println("Happiness: " + happiness);
+        System.out.println("Energy: " + energy);
+        System.out.println("Health: " + health);
+
     }
 }
