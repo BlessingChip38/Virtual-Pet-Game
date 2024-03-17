@@ -1,22 +1,22 @@
 public class Pet {
-    private String name;
-    private int health;
-    private int happiness;
-    private int energy;
+    private String name = "No Name";
+    private int health = 10;
+    private int happiness = 100;
+    private int energy = 100;
 
-    public Pet() {
-        this.name = "No Name";
-        this.health = 10;
-        this.happiness = 100;
-        this.energy = 100
-    }
+//    public Pet() {
+//        this.name = "No Name";
+//        this.health = 10;
+//        this.happiness = 100;
+//        this.energy = 100;
+//    }
 
-    public Pet(String name) {
-        this.name = name;
-        this.health = 10;
-        this.happiness = 100;
-        this.energy = 100;
-    }
+//    public Pet(String name) {
+//        this.name = name;
+//        this.health = 10;
+//        this.happiness = 100;
+//        this.energy = 100;
+//    }
 
     /**
      * This method will increase the happiness of the pet by amount inputted.
@@ -63,12 +63,12 @@ public class Pet {
     public void decreaseEnergy(int amount) {
         energy = Math.max(amount, 0);
     }
-    
+
     /**
      * This will change the pets name. Must only contain letters
      * @param name String for given pet name
      */
-    public void changeName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 

@@ -1,9 +1,9 @@
 public class Main {
     public static void main(String[] args) {
         Pet dog = new Pet();
-        Pet cat = new Pet("Hailee");
+        Pet cat = new Pet();
 
-
+        cat.setName("Hailee");
         dog.decreaseHappiness(10);
 
         System.out.println(dog.getHappiness());
