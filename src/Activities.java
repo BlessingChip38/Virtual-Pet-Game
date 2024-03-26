@@ -8,19 +8,22 @@ public class Activities {
 
     public void feed() {
         petAttributes.increaseHappiness(10);
+        petAttributes.decreaseHunger(50);
         petAttributes.decreaseEnergy(10);
 
     }
 
     public void rest() {
-        petAttributes.increaseEnergy(25);
-        petAttributes.decreaseHappiness(10);
+        petAttributes.increaseEnergy(50);
+        petAttributes.decreaseHappiness(30);
+        petAttributes.increaseHunger(25);
 
     }
 
     public void play() {
         petAttributes.increaseHappiness(50);
-        petAttributes.decreaseEnergy(50);
+        petAttributes.decreaseEnergy(25);
+        petAttributes.increaseHunger(15);
 
     }
 

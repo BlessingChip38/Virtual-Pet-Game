@@ -13,7 +13,7 @@ public class Pet {
         health = 10;
         happiness = 100;
         energy = 100;
-        hunger = 100;
+        hunger = 0;
     }
 
     /**
@@ -75,6 +75,7 @@ public class Pet {
         System.out.println("Happiness: " + happiness);
         System.out.println("Energy: " + energy);
         System.out.println("Health: " + health);
+        System.out.println("Hunger: " + hunger);
         System.out.println("-------------------");
     }
 

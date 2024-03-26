@@ -6,7 +6,7 @@ public class PetAttributes {
     }
 
     /**
-     * This method will increase the health of the pet by amount inputted. Max health is 10 Min health is 0
+     * This method will increase the health of the pet by amount inputted. Max health is 10, Min health is 0
      * @param amount Int that increases health
      */
     public void increaseHealth(int amount) {
@@ -15,15 +15,16 @@ public class PetAttributes {
     }
 
     /**
-     * This method will decrease the health of the pet by amount inputted. Max health is 10 Min health is 0
+     * This method will decrease the health of the pet by amount inputted. Max health is 10, Min health is 0
      * @param amount Int that decreases health
      */
     public void decreaseHealth(int amount) {
         //this will make sure happiness doesn't go below 0
         this.pet.setHealth(Math.max(this.pet.getHealth() - amount, 0));
     }
+
     /**
-     * This method will increase the happiness of the pet by amount inputted.
+     * This method will increase the happiness of the pet by amount inputted. Max Happiness is 100, Min Happiness is 0
      * @param amount Int that increased happiness.
      */
     public void increaseHappiness(int amount) {
@@ -41,28 +42,39 @@ public class PetAttributes {
     }
 
     /**
-     * This method will increase the energy of the pet by amount inputted. Max energy is 100 Min energy is 0
+     * This method will increase the energy of the pet by amount inputted. Max energy is 100, Min energy is 0
      * @param amount Int that increases energy
      */
     public void increaseEnergy(int amount) {
+        // This will make sure Energy can't be over 100.
         this.pet.setEnergy(Math.min(amount + this.pet.getEnergy(), 100));
     }
 
     /**
-     * This method will decrease the energy of the pet by amount inputted. Max energy is 10 Min energy is 0
+     * This method will decrease the energy of the pet by amount inputted. Max energy is 100, Min energy is 0
      * @param amount Int that decreases energy
      */
     public void decreaseEnergy(int amount) {
+        // this will make sure Energy doesn't go below 0
         this.pet.setEnergy(Math.max(this.pet.getEnergy() - amount, 0));
     }
 
-    public void printStats(){
-        System.out.println("Name: " + pet.getName());
-        System.out.println("Happiness: " + pet.getHappiness());
-        System.out.println("Energy: " + pet.getEnergy());
-        System.out.println("Health: " + pet.getHealth());
+    /**
+     * This method will increase the hunger of the pet by amount inputted. Max hunger is 100, Min hunger is 0
+     * @param amount Int that increases hunger
+     */
+    public void increaseHunger(int amount) {
+        //this will make sure hunger doesn't go over 100
+        this.pet.setHunger(Math.min(this.pet.getHunger() + amount, 100));
     }
 
-
+    /**
+     * This method will decrease the hunger of the pet by amount inputted. Max Hunger is 100, Min hunger is 0
+     * @param amount Int that decreases hunger
+     */
+    public void decreaseHunger(int amount) {
+        //this will make sure hunger doesn't go below 0
+        this.pet.setHunger(Math.max(this.pet.getHunger() - amount, 0));
+    }
 
 }
