@@ -1,2 +1,2 @@
-Virtual Pet Game
+#Virtual Pet Game.
 This is a basic Pet simulator.
